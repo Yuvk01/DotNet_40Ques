@@ -1,0 +1,258 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C# .NET — 40 Practical Questions</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f1f5f9;color:#18283c;font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}header{background:#112b46;color:white;padding:54px max(24px,calc((100vw - 1040px)/2)) 44px;border-bottom:7px solid #0eaa97}.eyebrow{font-size:12px;font-weight:750;letter-spacing:2px;text-transform:uppercase;color:#67e8d4}h1{font-size:clamp(30px,5vw,48px);line-height:1.12;letter-spacing:-1px;margin:12px 0 18px}header p{max-width:770px;color:#d4e1ee}.badges{display:flex;flex-wrap:wrap;gap:10px}.badges span{border:1px solid #567089;border-radius:30px;padding:5px 13px;font-size:13px}main{max-width:1090px;margin:30px auto;padding:0 24px}.intro,nav{background:white;padding:23px 28px;border:1px solid #d7e1ea;border-radius:12px;margin-bottom:22px}h2{font-size:25px;line-height:1.3;margin:38px 0 18px}nav h2,.intro h2{margin:0 0 12px;font-size:20px}nav a{display:block;color:#145e83;text-decoration:none;padding:4px 0}nav a:hover{text-decoration:underline}.question{background:white;border:1px solid #d7e1ea;border-radius:12px;padding:25px 28px;margin-bottom:19px;break-inside:avoid}.top{display:flex;align-items:baseline;gap:15px}.number{color:#0c7d74;font-weight:800;font-size:20px;white-space:nowrap}h3{font-size:21px;line-height:1.35;margin:0}.topics{color:#35607e;font-size:13px;font-weight:650;margin:9px 0 16px}.scenario{margin:0 0 14px}ol{padding-left:23px;margin:10px 0 0}li{padding-left:4px;margin:7px 0}.label{font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:750;color:#526879}footer{padding:24px 0 40px;color:#587084;font-size:13px;text-align:center}.print{border:0;border-radius:7px;background:#0c7d74;color:white;padding:10px 17px;font:inherit;cursor:pointer;margin-top:12px}@media(max-width:600px){main{padding:0 14px}.question,.intro,nav{padding:20px}.top{gap:10px}h3{font-size:19px}}@media print{body{background:white;font-size:10.5pt;color:black}header{padding:18px 0;background:white;color:black;border-bottom:2px solid #333}header p,.eyebrow{color:#333}h1{font-size:28pt}.badges span{border-color:#aaa}.print,nav{display:none}main{margin:0;max-width:none;padding:0}.intro{padding:12px 0;border:0}.question{border:1px solid #ccc;padding:15px 18px;margin:0 0 12px}h2{font-size:18pt;margin-top:24px}h3{font-size:14pt}.topics{font-size:9pt}footer{padding:15px 0}@page{size:A4;margin:16mm}}</style></head><body>
+<header><div class="eyebrow">Practical assignment collection</div><h1>C# / .NET<br>40 workplace challenges</h1><p>Build small, realistic applications that turn core language concepts into working business features.</p><div class="badges"><span>40 practical questions</span><span>Medium difficulty</span><span>Audience: Freshers</span><span>Questions only</span></div></header><main>
+<section class="intro"><h2>Assignment instructions</h2><p>Implement each question as a small C# console application unless the question requests multiple projects. Use in-memory data and local files where specified. No external services are required.</p><p>For each assignment, submit source code and console evidence for valid, boundary and invalid inputs. Keep intentionally invalid compile-time examples commented out. Use the supplied sample values and add at least one additional test of your own.</p><button class="print" onclick="window.print()">Print / Save as PDF</button></section>
+<nav aria-label="Question sections"><h2>Question sections</h2>
+<a href="#section-1">Data handling and application input · Questions 01–15</a>
+<a href="#section-2">Domain models and class design · Questions 16–25</a>
+<a href="#section-3">Inheritance and method behavior · Questions 26–31</a>
+<a href="#section-4">Interfaces, namespaces and integrated tasks · Questions 32–40</a>
+</nav>
+<section id="section-1"><h2>Data handling and application input</h2>
+<article class="question" id="q01"><div class="top"><span class="number">Q01</span><h3>Invoice value exchange</h3></div><p class="topics">Boxing and unboxing</p><p class="scenario">A billing component receives invoice values through object variables.</p><div class="label">Your task</div><ol>
+<li>Use invoice number 1001, total 2499.50m and paid status true as sample values.</li>
+<li>Store each value in an object variable and recover it using the correct original value type.</li>
+<li>Demonstrate what happens when the boxed invoice number is treated as a long instead of its original type; keep the application running.</li>
+<li>Produce a short console report showing original type, stored value and recovered type.</li>
+</ol></article>
+<article class="question" id="q02"><div class="top"><span class="number">Q02</span><h3>Daily sales review</h3></div><p class="topics">Single-dimensional arrays</p><p class="scenario">A store manager needs a seven-day sales summary.</p><div class="label">Your task</div><ol>
+<li>Store daily sales of 12500, 9800, 15400, 8700, 19100, 16800 and 11200 in a single-dimensional array.</li>
+<li>Accept a sales target and report the days that meet or exceed it.</li>
+<li>Find the total, average, highest and lowest sales using loops.</li>
+<li>Include a test with repeated highest values and identify every matching day.</li>
+</ol></article>
+<article class="question" id="q03"><div class="top"><span class="number">Q03</span><h3>Branch sales matrix</h3></div><p class="topics">Multi-dimensional arrays</p><p class="scenario">A retailer tracks three branches across four product categories.</p><div class="label">Your task</div><ol>
+<li>Use a rectangular decimal array with rows for branches and columns for categories.</li>
+<li>Use rows [12000, 9000, 5000, 7000], [8000, 11000, 6000, 9500] and [15000, 7000, 8500, 4000].</li>
+<li>Calculate totals for each branch and each category, and identify the branch with the highest total.</li>
+<li>Allow the user to update one cell after validating the selected row, column and non-negative amount.</li>
+</ol></article>
+<article class="question" id="q04"><div class="top"><span class="number">Q04</span><h3>Technician shift allocation</h3></div><p class="topics">Jagged arrays</p><p class="scenario">A service company assigns a different number of jobs to each technician.</p><div class="label">Your task</div><ol>
+<li>Store job durations for four technicians as [45, 60, 30], [90], [], and [20, 35, 50, 40].</li>
+<li>Use a jagged array and display each technician’s job count and total assigned minutes.</li>
+<li>Identify technicians with no work and technicians assigned more than 120 minutes.</li>
+<li>Allow an additional duration to be added to one technician without changing the other rows.</li>
+</ol></article>
+<article class="question" id="q05"><div class="top"><span class="number">Q05</span><h3>Employee onboarding details</h3></div><p class="topics">Nullable types</p><p class="scenario">HR must distinguish missing information from valid zero values.</p><div class="label">Your task</div><ol>
+<li>Represent an optional age, optional bonus amount and optional joining date with nullable value types.</li>
+<li>Create records for a missing bonus, a zero bonus and a positive bonus; preserve those differences in the report.</li>
+<li>Display a meaningful label for missing values and calculate total known bonuses.</li>
+<li>Reject negative ages or bonuses, and demonstrate updating an initially missing value.</li>
+</ol></article>
+<article class="question" id="q06"><div class="top"><span class="number">Q06</span><h3>Warehouse stock snapshot</h3></div><p class="topics">Implicitly typed local variables</p><p class="scenario">A warehouse clerk needs a small stock summary built from local variables.</p><div class="label">Your task</div><ol>
+<li>Use var for an item code, quantity, unit price and an array of quantities, with initial values that make their intended types clear.</li>
+<li>Calculate inventory value and display the runtime type and value of each local variable.</li>
+<li>Update quantities without changing their established types.</li>
+<li>Add comments identifying one attempted reassignment to an incompatible type; keep that invalid statement commented out.</li>
+</ol></article>
+<article class="question" id="q07"><div class="top"><span class="number">Q07</span><h3>External courier payloads</h3></div><p class="topics">var vs dynamic</p><p class="scenario">Two courier partners return delivery details with different payload shapes.</p><div class="label">Your task</div><ol>
+<li>Create a strongly typed Shipment class and access one instance through a var local variable.</li>
+<li>Create two in-memory dynamic payloads: one with TrackingId and Status, and another with TrackingId only.</li>
+<li>Read the required fields, handle a missing dynamic member and continue processing the remaining payloads.</li>
+<li>Include a commented invalid member access on the var-based shipment and record when each kind of mistake is detected.</li>
+</ol></article>
+<article class="question" id="q08"><div class="top"><span class="number">Q08</span><h3>Payment object routing</h3></div><p class="topics">is and as operators</p><p class="scenario">A checkout component receives mixed payment objects.</p><div class="label">Your task</div><ol>
+<li>Create CardPayment and WalletPayment classes and process an object array containing both, an unrelated string and null.</li>
+<li>Use is to identify supported payment objects and display their relevant details.</li>
+<li>Use as for a separate safe reference conversion and handle a failed conversion.</li>
+<li>Process every array entry without an unhandled exception.</li>
+</ol></article>
+<article class="question" id="q09"><div class="top"><span class="number">Q09</span><h3>Inventory adjustment workflow</h3></div><p class="topics">ref vs out</p><p class="scenario">A store updates stock and validates requested quantities entered as text.</p><div class="label">Your task</div><ol>
+<li>Create an adjustment method that changes an existing stock quantity through ref and rejects any adjustment that would make stock negative.</li>
+<li>Create a separate validation method that returns success or failure and supplies a quantity through out.</li>
+<li>Test positive adjustments, valid reductions, excessive reductions and invalid input.</li>
+<li>Display the stock before and after each attempted adjustment.</li>
+</ol></article>
+<article class="question" id="q10"><div class="top"><span class="number">Q10</span><h3>Mixed audit event viewer</h3></div><p class="topics">object base class</p><p class="scenario">An audit viewer receives values from several application components.</p><div class="label">Your task</div><ol>
+<li>Create an object array containing an integer, decimal, string, date and a custom AuditEvent instance.</li>
+<li>Display a readable representation and runtime type for every entry.</li>
+<li>Give AuditEvent its own meaningful ToString representation.</li>
+<li>Compare two references to the same AuditEvent instance and two separate AuditEvent instances without changing their default equality behavior.</li>
+</ol></article>
+<article class="question" id="q11"><div class="top"><span class="number">Q11</span><h3>Duplicate customer check</h3></div><p class="topics">Equals() vs ==</p><p class="scenario">Customer imports contain matching names in different objects.</p><div class="label">Your task</div><ol>
+<li>Create two distinct Customer instances with identical property values and a third variable referring to the first instance.</li>
+<li>Compare these values with == and Equals before adding custom equality behavior.</li>
+<li>Compare two separately created strings containing the same customer code, both as strings and through object variables.</li>
+<li>Record the observed comparison results and explain their meaning in comments; do not override equality in this exercise.</li>
+</ol></article>
+<article class="question" id="q12"><div class="top"><span class="number">Q12</span><h3>Monthly attendance export</h3></div><p class="topics">String vs StringBuilder</p><p class="scenario">HR generates a text report with one line for each attendance entry.</p><div class="label">Your task</div><ol>
+<li>Generate 1000 attendance entries in memory and build the same report once using string concatenation and once using StringBuilder.</li>
+<li>Include a report heading, one line per entry and a final entry count.</li>
+<li>Use Stopwatch to record elapsed time and verify that the final report contents match exactly.</li>
+<li>Report the measurements without assuming that one run proves a universal performance result.</li>
+</ol></article>
+<article class="question" id="q13"><div class="top"><span class="number">Q13</span><h3>Customer contact cleanup</h3></div><p class="topics">String class methods</p><p class="scenario">A CRM import contains inconsistent names, phone numbers and customer codes.</p><div class="label">Your task</div><ol>
+<li>Use sample input with leading spaces, repeated internal spaces, mixed case and hyphens in phone numbers.</li>
+<li>Clean names, normalize customer codes to uppercase and remove permitted phone separators using string methods.</li>
+<li>Split a full name into non-empty parts and search customer names without case sensitivity.</li>
+<li>Handle null, empty and whitespace-only inputs and display a validation message for each unusable record.</li>
+</ol></article>
+<article class="question" id="q14"><div class="top"><span class="number">Q14</span><h3>Delivery charge calculator</h3></div><p class="topics">Default and named parameters</p><p class="scenario">An online store quotes deliveries with optional service choices.</p><div class="label">Your task</div><ol>
+<li>Create a quotation method accepting weight and distance, plus delivery speed and insurance options with default values.</li>
+<li>Use a base charge of INR 40, INR 12 per kilogram, INR 3 per kilometre, an INR 80 express surcharge and an INR 25 insurance surcharge.</li>
+<li>Call the method with required arguments only and with named arguments in different permitted orders.</li>
+<li>Reject zero or negative weight and negative distance; display the selected options and final charge.</li>
+</ol></article>
+<article class="question" id="q15"><div class="top"><span class="number">Q15</span><h3>Order input conversion desk</h3></div><p class="topics">Parse(), TryParse() and Convert</p><p class="scenario">A console order screen receives quantity and price values from different sources.</p><div class="label">Your task</div><ol>
+<li>Process text quantities &quot;12&quot;, &quot;abc&quot;, &quot;&quot;, null and &quot;999999999999&quot; using int.Parse, int.TryParse and Convert.ToInt32.</li>
+<li>Record success, returned value or exception type separately for each method and input.</li>
+<li>Accept a decimal unit price using an explicitly chosen culture so decimal separators are unambiguous.</li>
+<li>Ensure that one invalid conversion does not prevent the remaining cases from running.</li>
+</ol></article>
+</section>
+<section id="section-2"><h2>Domain models and class design</h2>
+<article class="question" id="q16"><div class="top"><span class="number">Q16</span><h3>Parcel dimensions record</h3></div><p class="topics">Structures</p><p class="scenario">A courier stores parcel dimensions as a small value-type record.</p><div class="label">Your task</div><ol>
+<li>Create a Dimensions struct containing length, width and height, with validation against non-positive measurements.</li>
+<li>Add a method that calculates volume.</li>
+<li>Copy one Dimensions variable into another, change the copy and display both variables.</li>
+<li>Use the struct inside a Parcel class and show how copying a Parcel reference differs from copying a Dimensions value.</li>
+</ol></article>
+<article class="question" id="q17"><div class="top"><span class="number">Q17</span><h3>Order status tracker</h3></div><p class="topics">Enums</p><p class="scenario">A fulfilment team needs meaningful order statuses.</p><div class="label">Your task</div><ol>
+<li>Create an OrderStatus enum with Pending, Packed, Shipped, Delivered and Cancelled values.</li>
+<li>Permit Pending to become Packed or Cancelled, Packed to become Shipped or Cancelled, and Shipped to become Delivered.</li>
+<li>Reject all other transitions, including changes after Delivered or Cancelled.</li>
+<li>Accept a status name from console input, reject undefined values and show each attempted transition.</li>
+</ol></article>
+<article class="question" id="q18"><div class="top"><span class="number">Q18</span><h3>Library book model</h3></div><p class="topics">Architecture of a class</p><p class="scenario">A library wants a reusable model for each physical book copy.</p><div class="label">Your task</div><ol>
+<li>Create a Book class with a private availability field, public identifying properties, a constructor and Borrow and Return methods.</li>
+<li>Require a non-empty copy identifier and title when creating a book.</li>
+<li>Prevent borrowing an unavailable copy and returning an already available copy.</li>
+<li>Create two book objects and demonstrate that their availability is tracked independently.</li>
+</ol></article>
+<article class="question" id="q19"><div class="top"><span class="number">Q19</span><h3>Training batch registration</h3></div><p class="topics">Instance, class and reference variables</p><p class="scenario">A training coordinator registers learners into a batch.</p><div class="label">Your task</div><ol>
+<li>Create a Registration class with per-registration details and a static counter shared by all instances.</li>
+<li>Create three registrations, then assign one registration reference to a second variable.</li>
+<li>Update the referenced object through the second variable and display both views of that object.</li>
+<li>Display the shared count and show that creating an alias does not create an additional registration.</li>
+</ol></article>
+<article class="question" id="q20"><div class="top"><span class="number">Q20</span><h3>Bank account boundaries</h3></div><p class="topics">private and public access modifiers</p><p class="scenario">A bank account must protect its balance from direct modification.</p><div class="label">Your task</div><ol>
+<li>Create a BankAccount class with a private balance field and a public read-only balance property.</li>
+<li>Expose public deposit and withdrawal operations with amount validation and insufficient-funds handling.</li>
+<li>Create two accounts and demonstrate independent balances.</li>
+<li>Include a commented external attempt to change the private field, then document the compiler restriction in a short comment.</li>
+</ol></article>
+<article class="question" id="q21"><div class="top"><span class="number">Q21</span><h3>Payroll assembly boundaries</h3></div><p class="topics">protected, internal and protected internal</p><p class="scenario">A payroll library shares different operations with different callers.</p><div class="label">Your task</div><ol>
+<li>Create a Payroll.Core class library and a separate console application that references it.</li>
+<li>Place an Employee base class, a same-assembly helper and a derived class in Payroll.Core; place another derived class and an unrelated caller in the console project.</li>
+<li>Give Employee separate protected, internal and protected internal members, plus private and public members for comparison.</li>
+<li>Demonstrate permitted access from the different callers and keep rejected access attempts commented out with their caller context.</li>
+</ol></article>
+<article class="question" id="q22"><div class="top"><span class="number">Q22</span><h3>Insurance policy family</h3></div><p class="topics">Abstract classes</p><p class="scenario">An insurer calculates premiums for different policy types.</p><div class="label">Your task</div><ol>
+<li>Create an abstract InsurancePolicy class with policy number, customer name and an abstract premium-calculation method.</li>
+<li>Create HealthPolicy and MotorPolicy classes; health premium is base premium plus INR 500 per covered member, and motor premium is 3% of declared vehicle value.</li>
+<li>Validate required details and reject negative monetary values or a non-positive member count.</li>
+<li>Store both policy types in an InsurancePolicy array and print a premium summary through the common base type.</li>
+</ol></article>
+<article class="question" id="q23"><div class="top"><span class="number">Q23</span><h3>Meeting room reservations</h3></div><p class="topics">Constructors and constructor overloading</p><p class="scenario">An office accepts room bookings through several entry points.</p><div class="label">Your task</div><ol>
+<li>Create a RoomBooking class with one constructor for room and start time, another adding duration and another adding organizer.</li>
+<li>Use a 30-minute duration and &quot;Unassigned&quot; organizer when those details are omitted.</li>
+<li>Centralize validation so every constructor rejects an empty room and a non-positive duration.</li>
+<li>Create one booking with each constructor and display the resulting complete booking details.</li>
+</ol></article>
+<article class="question" id="q24"><div class="top"><span class="number">Q24</span><h3>Temporary export lifecycle</h3></div><p class="topics">Destructors, garbage collection and cleanup</p><p class="scenario">An export tool creates many short-lived objects and writes a local report file.</p><div class="label">Your task</div><ol>
+<li>Create an ExportTracker class with constructor and finalizer messages, and produce a batch of short-lived tracker objects.</li>
+<li>Write a small report using a file-writing resource that is disposed deterministically.</li>
+<li>Observe normal execution; optionally perform forced garbage collection in a separately labelled experiment and record finalizer observations.</li>
+<li>Submit observation notes about timing and repeatability; the report file must be closed without relying on a finalizer.</li>
+</ol></article>
+<article class="question" id="q25"><div class="top"><span class="number">Q25</span><h3>Local expense summary</h3></div><p class="topics">.NET Base Class Library</p><p class="scenario">An accounts assistant needs a dated expense report saved to disk.</p><div class="label">Your task</div><ol>
+<li>Use BCL types for dates, paths, directories, file writing and numeric formatting.</li>
+<li>Accept three expense descriptions and non-negative amounts, then generate a timestamped text report inside an Exports folder.</li>
+<li>Include the total and format currency explicitly as INR using a suitable culture.</li>
+<li>Handle an invalid amount and an unavailable output path with clear messages; do not use external packages or a database.</li>
+</ol></article>
+</section>
+<section id="section-3"><h2>Inheritance and method behavior</h2>
+<article class="question" id="q26"><div class="top"><span class="number">Q26</span><h3>Employee contact directory</h3></div><p class="topics">Inheritance</p><p class="scenario">An organization maintains employees and managers in one directory.</p><div class="label">Your task</div><ol>
+<li>Create an Employee base class with employee ID, name and email, and a Manager derived class with department and team size.</li>
+<li>Reuse base initialization and shared display behavior rather than duplicating the employee fields.</li>
+<li>Create at least two employees and two managers and include managers in an Employee array.</li>
+<li>Validate team size and display the common details for every directory entry.</li>
+</ol></article>
+<article class="question" id="q27"><div class="top"><span class="number">Q27</span><h3>Restaurant order entry</h3></div><p class="topics">Method overloading</p><p class="scenario">A restaurant accepts an item alone, an item with quantity or an item with quantity and a special instruction.</p><div class="label">Your task</div><ol>
+<li>Create three AddItem overloads that support these combinations.</li>
+<li>Use a small fixed menu with prices and reject unknown items or non-positive quantities.</li>
+<li>Store accepted order lines and calculate their total.</li>
+<li>Call all three overloads and ensure that instructions appear only on the relevant order lines.</li>
+</ol></article>
+<article class="question" id="q28"><div class="top"><span class="number">Q28</span><h3>Delivery partner charges</h3></div><p class="topics">Method overriding</p><p class="scenario">A logistics application calculates charges through a common delivery-service type.</p><div class="label">Your task</div><ol>
+<li>Create a DeliveryService base class with a virtual charge method and StandardDelivery and ExpressDelivery overrides.</li>
+<li>Use INR 50 plus INR 10 per kilometre for standard delivery and INR 100 plus INR 15 per kilometre for express delivery.</li>
+<li>Call the method through base-class references to both derived objects.</li>
+<li>Reject negative distances and print an itemized charge summary for distances 0, 5 and 12.</li>
+</ol></article>
+<article class="question" id="q29"><div class="top"><span class="number">Q29</span><h3>Warehouse weight totals</h3></div><p class="topics">Operator overloading</p><p class="scenario">A warehouse combines weights recorded in kilograms.</p><div class="label">Your task</div><ol>
+<li>Create a Weight struct that stores a non-negative decimal number of kilograms.</li>
+<li>Overload + to combine two weights and - to subtract one weight from another; reject a negative result.</li>
+<li>Give the type a readable textual representation and demonstrate chained additions.</li>
+<li>Test zero weight, decimal weights and an attempted subtraction larger than the available weight.</li>
+</ol></article>
+<article class="question" id="q30"><div class="top"><span class="number">Q30</span><h3>Legacy report display</h3></div><p class="topics">Method hiding and the new keyword</p><p class="scenario">A legacy report class already exposes a non-virtual Display method.</p><div class="label">Your task</div><ol>
+<li>Create LegacyReport with a non-virtual Display method and DashboardReport with a new Display method.</li>
+<li>Give the two methods distinct visible messages and call them using both derived-type and base-type references to the same derived object.</li>
+<li>Add a separate virtual method and override it to compare the two dispatch behaviors.</li>
+<li>Record the observed behavior in comments and keep the original legacy method non-virtual.</li>
+</ol></article>
+<article class="question" id="q31"><div class="top"><span class="number">Q31</span><h3>Finalized payment receipt</h3></div><p class="topics">Sealed classes</p><p class="scenario">A payment application needs a receipt type whose inheritance hierarchy ends at that type.</p><div class="label">Your task</div><ol>
+<li>Create a sealed PaymentReceipt class with receipt number, amount and creation time.</li>
+<li>Expose read-only receipt information initialized through a validated constructor.</li>
+<li>Create and display two receipts, and pass a receipt to a reporting method.</li>
+<li>Include a commented attempt to inherit from PaymentReceipt and document why the compiler rejects it.</li>
+</ol></article>
+</section>
+<section id="section-4"><h2>Interfaces, namespaces and integrated tasks</h2>
+<article class="question" id="q32"><div class="top"><span class="number">Q32</span><h3>Alert delivery contract</h3></div><p class="topics">Creating interfaces</p><p class="scenario">An application sends notifications using different channels.</p><div class="label">Your task</div><ol>
+<li>Create an INotifier interface and EmailNotifier and SmsNotifier implementations.</li>
+<li>Use an in-memory demonstration that prints channel, recipient and message rather than contacting real services.</li>
+<li>Write one method that accepts INotifier and processes a notification through either implementation.</li>
+<li>Reject blank recipients or messages and demonstrate both channels through interface references.</li>
+</ol></article>
+<article class="question" id="q33"><div class="top"><span class="number">Q33</span><h3>Device operation contracts</h3></div><p class="topics">Interface inheritance</p><p class="scenario">An office manages printers, scanners and multifunction devices.</p><div class="label">Your task</div><ol>
+<li>Define IPrinter and IScanner interfaces, then an IMultiFunctionDevice interface that inherits from both.</li>
+<li>Implement a printer-only device and a multifunction device.</li>
+<li>Create separate caller methods that require IPrinter, IScanner or IMultiFunctionDevice.</li>
+<li>Demonstrate permitted calls and keep an invalid printer-only-to-scanner assignment commented out.</li>
+</ol></article>
+<article class="question" id="q34"><div class="top"><span class="number">Q34</span><h3>Product stock contract</h3></div><p class="topics">Properties within interfaces</p><p class="scenario">Two product types must expose the same stock information to a dashboard.</p><div class="label">Your task</div><ol>
+<li>Create an IStockItem interface with a read-only ItemCode, a get/set UnitPrice and a read-only Quantity.</li>
+<li>Implement GroceryItem and HardwareItem with constructor validation and controlled stock-adjustment methods.</li>
+<li>Display both implementations using an IStockItem array and update a price through an interface reference.</li>
+<li>Prevent negative prices and negative stock, and keep a direct assignment to the interface’s read-only Quantity commented out.</li>
+</ol></article>
+<article class="question" id="q35"><div class="top"><span class="number">Q35</span><h3>Retail application organization</h3></div><p class="topics">Namespaces</p><p class="scenario">A retail application has sales and support modules that both define a Ticket type.</p><div class="label">Your task</div><ol>
+<li>Create separate namespaces for Retail.Sales, Retail.Support and Retail.Reporting.</li>
+<li>Define a different Ticket class in the sales and support namespaces with fields appropriate to each module.</li>
+<li>Use namespace aliases or fully qualified names so a single report can work with both Ticket types.</li>
+<li>Organize the source into matching folders and demonstrate that both modules can be used without a naming conflict.</li>
+</ol></article>
+<article class="question" id="q36"><div class="top"><span class="number">Q36</span><h3>Sales dashboard projection</h3></div><p class="topics">Anonymous types</p><p class="scenario">A manager needs a temporary display shape without creating a new dashboard class.</p><div class="label">Your task</div><ol>
+<li>Create a small array of Product objects with code, name, category, price and quantity.</li>
+<li>Project each product into an anonymous type containing its name, category and inventory value; LINQ may be used.</li>
+<li>Display the projected values and calculate the combined inventory value.</li>
+<li>Keep a commented attempt to assign a new value to an anonymous type property and note the compile-time restriction.</li>
+</ol></article>
+<article class="question" id="q37"><div class="top"><span class="number">Q37</span><h3>Leave approval policy</h3></div><p class="topics">Abstract classes and interfaces</p><p class="scenario">An HR application applies different leave limits while producing a common approval summary.</p><div class="label">Your task</div><ol>
+<li>Create an abstract LeavePolicy with shared employee details and an abstract validation method, plus an IApprovalSummary interface.</li>
+<li>Implement AnnualLeavePolicy with a 20-day limit and SickLeavePolicy with a 10-day limit; both must provide the summary contract.</li>
+<li>Evaluate requests for 0, 5 and 25 days and reject non-positive requests.</li>
+<li>Process both policies through base-type references, then obtain their summaries through interface references.</li>
+</ol></article>
+<article class="question" id="q38"><div class="top"><span class="number">Q38</span><h3>Customer import validation</h3></div><p class="topics">Strings, nullable types and TryParse</p><p class="scenario">A customer migration tool reads simple comma-separated records with optional age values.</p><div class="label">Your task</div><ol>
+<li>Use records &quot;C101, Ravi Kumar ,29&quot;, &quot;C102,Neha,&quot;, &quot;C103,Anu,abc&quot;, &quot;C104,,35&quot; and &quot;C105,Kiran,-2&quot;; fields never contain the comma character.</li>
+<li>Create a Customer class, clean the text fields and use a nullable age to represent a genuinely absent age.</li>
+<li>Reject malformed records, missing required names or codes, and invalid or negative ages without stopping the import.</li>
+<li>Display accepted customers and a separate rejection report identifying the source record and reason.</li>
+</ol></article>
+<article class="question" id="q39"><div class="top"><span class="number">Q39</span><h3>Shopping cart checkout</h3></div><p class="topics">Arrays, classes, enum and named parameters</p><p class="scenario">A small shop needs an in-memory checkout workflow.</p><div class="label">Your task</div><ol>
+<li>Create Product and CartLine classes, use an array for at least four cart lines and use an enum for payment mode.</li>
+<li>Reject non-positive quantities and negative prices; calculate subtotal, percentage discount and a fixed delivery charge.</li>
+<li>Create a checkout method with optional discount and delivery parameters, then demonstrate default and named-argument calls.</li>
+<li>Build a receipt using StringBuilder showing each line, payment mode and the final amount; use no database or UI framework.</li>
+</ol></article>
+<article class="question" id="q40"><div class="top"><span class="number">Q40</span><h3>Service visit billing</h3></div><p class="topics">Inheritance, overriding, interfaces and conversion</p><p class="scenario">A repair company bills home visits and remote support sessions using one workflow.</p><div class="label">Your task</div><ol>
+<li>Create an abstract ServiceVisit with visit ID and customer name, a HomeVisit charging INR 300 plus INR 200 per hour, and a RemoteVisit charging INR 150 per hour.</li>
+<li>Define an invoice interface and implement it for both visit types; store visits in an array of the base type and calculate charges through overridden methods.</li>
+<li>Read whole-number hours safely, require at least one hour, and reject invalid text without terminating the application.</li>
+<li>Use an enum for visit status and produce a formatted summary containing visit type, customer, hours, charge and status; include successful and rejected requests.</li>
+</ol></article>
+</section>
+<footer>C# / .NET Practical Assignment Collection · 40 Questions</footer></main></body></html>
